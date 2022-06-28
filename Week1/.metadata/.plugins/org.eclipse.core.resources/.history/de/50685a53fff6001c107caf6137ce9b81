@@ -1,0 +1,42 @@
+package com.revature;
+
+public class Launcher {
+
+	//nice shortcut for creating main method: main + ctrl + space
+	public static void main(String[] args) {
+		
+		System.out.println("==========================================(Common Primitives)");
+		
+		//int is the most common integer-type primitive (others are byte, short, long)
+		int i = 50000000;
+		
+		//if you for some reason need a way bigger number, you can use the "long" type
+		long l = 500000000000000000L; //just note, you have to write an "L" at the end of the number
+		
+		//we can use the + to concatenate (attach) strings and other values
+		System.out.println("the value of my int is: " + i);
+		//we can still add stuff after the concatenation
+		System.out.println("the sum of my int and long is: " + (i + l));
+		//we needed parenthesis so that the two numbers got added before any String concatenate. PEMDAS 
+	
+		
+		//chars are written with 'single quotes', unless they're numbers
+		//they represent a single CHARacter, so we can't have multiple characters in one char
+		char c = 'c';
+		//char c2 = 'ha'; //NO!!!!! chars can only hold one character
+		
+		char c3 = 15000; //I thought you said chars can only have one character? 
+		//True, but this number represents a UNICODE VALUE
+		
+		System.out.println(c);
+		System.out.println(c3);
+		
+		System.out.println(c + c3);
+		
+		
+		
+		//doubles later---------------
+		
+	}
+	
+}
