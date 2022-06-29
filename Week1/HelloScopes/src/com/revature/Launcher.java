@@ -76,6 +76,29 @@ public class Launcher {
 		System.out.println(launcher2.i2);
 		System.out.println(launcher.i2);
 		
+		System.out.println("========================================================(Method/Block Scopes)");
+		
+		//call the scopesMethod() below
+		scopesMethod();
+		
+	} //end of main method
+	
+	public static void scopesMethod() {
+		
+		double d = 25.50; //this is a method scoped variable - only visible within the method it's in
+		
+		if(d > 5) {
+			
+			double d2 = 30.50; //this is a block scoped variable - only visible within the if block
+			
+			System.out.println("Block Scoped Variable: " + d2);
+			System.out.println("Method Scoped Variable: " + d);
+			//variable d is visible in this if block since it's within the same method
+			
+		}
+		
+		//System.out.println(d2);
+		//d2 is only visible within the if block, since it was declared there.
 	}
 	
 }

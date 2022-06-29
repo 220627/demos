@@ -10,7 +10,6 @@ public class Person {
 	public String hairColor; //this is camelCase. Variables with multi-word names will be written like this.
 	public String gender;
 	
-	
 	//declaring a method for the Person class. Think of this as something a Person can do
 	public String sleep(String words) {
 		return this.name + " sleeptalks: " + words;
