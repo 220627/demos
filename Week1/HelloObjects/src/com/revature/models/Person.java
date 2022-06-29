@@ -21,6 +21,9 @@ public class Person {
 	
 	//constructors here-------------
 	
+	//These constructors are an example of **METHOD OVERLOADING**
+	//They have the same name (Person) but different sets of parameters
+	
 	//no-args constructor. No args constructors have no arguments, hence the name
 	//If you create a Person object without parameters, this constructor will be called.
 	public Person() {
@@ -37,11 +40,14 @@ public class Person {
 		//this is confusing... why are we setting things equal to themselves?
 		//trick question - we aren't!
 		//this.name, this.hairColor etc are referring to the actual variables in the Class
-		//we're saying "the "name" variable in this Class will be equal to the "name" String the user provides
+		//we're saying the "name" variable in this Class will be equal to the "name" String parameter the user provides
 	}
 
 	
 	//constructor talk-------------
+	
+	//Quick answer: constructors create (instantiate) our Objects by giving values to its variables
+	//giving values to variables is also known as initialization 
 	
 	//Constructors look like methods with no return type (because methods will NEVER return anything)
 	//Constructors will ALWAYS have the same name as the Class
@@ -49,11 +55,11 @@ public class Person {
 	//Remember, constructors are special methods that let us instantiate (create) objects
 	//They let us assign values to the object's variables. In this case, name, hairColor, gender
 	
-	//explain the "this" keyword again?
+	//explain the "this" keyword in a constructor again?
 	 
 	/*
 
-	the keyword 'this' refers to the object so the variables will be object's variable 
+	the keyword 'this' refers to the object... so the variables referred to by "this" will be object's variable 
 	and the other variables will be values that we pass
 
 	 */

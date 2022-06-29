@@ -2,6 +2,7 @@ package com.revature;
 
 //Imports go here... The Launcher Class can't see anything in com.revature.models unless we IMPORT
 import com.revature.models.Person;
+import com.revature.models.Pirate;
 
 public class Launcher {
 
@@ -31,8 +32,29 @@ public class Launcher {
 		//Print out James Franco's variables
 		System.out.println(james.name + " has " + james.hairColor + " hair and is " + james.gender);
 		
-		//I almost forgot to use the sleep() method of the Person class
+		System.out.println("======================================(Using the methods)");
+		
+		//Instantiate a Pirate object 
+		Pirate blackBeard = new Pirate();
+		
+		//printing out the Pirate's variables 
+		System.out.println(blackBeard.name); // We get "Daniel" from the Person no args constructor
+		System.out.println(blackBeard.dubloons); //We get 4500 from the Pirate no args constructor
+		
+		//Instantiate a Pirate object with all args
+		Pirate redBeard = new Pirate("RedBeard", "Blonde", "Dude", 200000);
+		
+		//lets see the difference between the sleep() method of Pirate and Person
 		System.out.println(daniel.sleep("YERRRRRRR"));
+		System.out.println(redBeard.sleep("This String is never used in the Pirate sleep() method"));
+		
+		//Note the original sleep() functionality of the Person Class, followed by the overridden one of the Pirate Class
+		
+		//using the arggggggg() method of the Pirate Class
+		System.out.println(redBeard.arggggggg());
+		
+		//could we call the arggggggg() method of a Person object?
+		//NO!!!!!! because the Person Class doesn't have that method. It's unique to Pirate 
 		
 	}
 	
