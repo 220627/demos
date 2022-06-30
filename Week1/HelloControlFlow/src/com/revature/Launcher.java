@@ -70,7 +70,7 @@ public class Launcher {
 		//The loop executed 10 times (i = 0, 1, 2, 3... 9). Once i = 10, the expression is false and the loop breaks
 		
 		//More interesting use of for loops below
-		
+	
 		//This is an Array, which we'll talk about tomorrow morning, but basically it's a list of values.
 		char[] myName = {'B', 'E', ' ', 'N', 'Q', 'Q'};
 		
