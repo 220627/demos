@@ -91,7 +91,32 @@ public class Launcher {
 			
 		}
 		
-		System.out.println("=================================(Switch Statement)");
+		System.out.println("=======================================(Switch Statement)");
+		
+		//declare a variable to use as our switch evaluation
+		int age = 30;
+		
+		//depending on the value of the "age" variable, one of the following cases will run
+		switch(age) {
+		
+		//each case is set to run certain code if age == the case
+		//we need BREAK statements at the end of each case, or else every case under the one that executes will also run
+		//break statements exit out of loops completely (whereas continue goes to the next loop)
+		//there may be cases where you WANT every case to run after another - then, you'd leave out the break
+		case 21:
+			System.out.println("You are 21 years old");
+			break;
+		case 24: 
+			System.out.println("You are 24 years old");
+			break;
+		case 22:
+			System.out.println("You are 22 years old");
+			break;
+		default:
+			System.out.println("Your age does not match any of the cases...");
+			break;
+			//the default case will run if none of the other cases above match the switch's argument (the age variable)
+		}
 		
 	}
 	
