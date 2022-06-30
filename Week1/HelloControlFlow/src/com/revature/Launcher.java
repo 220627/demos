@@ -114,7 +114,7 @@ public class Launcher {
 			break;
 		default:
 			System.out.println("Your age does not match any of the cases...");
-			break;
+			break; //this break is definitely optional
 			//the default case will run if none of the other cases above match the switch's argument (the age variable)
 		}
 		
