@@ -17,4 +17,8 @@ public interface Creature {
 		//SOME CODE WOULD GO HERE
 	}
 	
+	//Interfaces and Abstract Classes are considered "contracts"
+	//this is because any normal Class that inherts from them MUST implement the abstract methods
+	//in plainer English, they must give a method body to these no-method-body-having-methods.
+	
 }
