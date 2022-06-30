@@ -1,5 +1,7 @@
 package com.revature;
 
+import com.revature.models.StaticMethodClass;
+
 public class Launcher {
 
 	//This is a Class scoped primitive variable. *Note the "static", which makes it Class scoped (it belongs to the Class)
@@ -80,6 +82,10 @@ public class Launcher {
 		
 		//call the scopesMethod() below
 		scopesMethod();
+		
+		System.out.println("==============================================(Testing a static method from another Class)");
+		
+		StaticMethodClass.testVisibility();
 		
 	} //end of main method
 	

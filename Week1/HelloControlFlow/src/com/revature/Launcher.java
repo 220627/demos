@@ -84,7 +84,7 @@ public class Launcher {
 			//"if the char at position i is equal to an empty space, skip this iteration of the for loop
 			if(myName[i] == ' ' || myName[i] == 'Q') {
 				continue; //continue causes the for loop to skip and move on to the next iteration
-			}
+			} 
 			
 			//This print statement will only run if the condition in the if statement is false
 			System.out.println(myName[i]);
