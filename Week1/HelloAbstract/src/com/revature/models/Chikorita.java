@@ -5,6 +5,8 @@ package com.revature.models;
 //Pokemon also implements Creature... so Chikorita inherits from both Pokemon AND creature. so it has access to all fields/methods
 public class Chikorita extends Pokemon{
 
+	//ben will add variables and some constructors************************************************88dfjkdsgajvdshdskjhdsjh
+	
 	//This is the eat method from the CREATURE INTERFACE
 	@Override
 	public void eat(String food) {
