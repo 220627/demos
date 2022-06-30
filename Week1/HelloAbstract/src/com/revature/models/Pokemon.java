@@ -17,4 +17,10 @@ public abstract class Pokemon implements Creature {
 	//abstract method - is unimplemented
 	public abstract void fight(); //every unique Class that extends the Pokemon Abstract Class will need to implement this method.
 
+	//should I maybe add a constructor? the default no args constructor is here for now
+	
+	
+	//abstract classes can't be instantiated but they can have constructors? 
+	//Yup, any subclasses will have access to them so they can still be used.
+
 }
