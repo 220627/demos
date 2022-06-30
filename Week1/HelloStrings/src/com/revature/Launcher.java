@@ -2,7 +2,7 @@ package com.revature;
 
 import java.util.Scanner;
 
-public class Launcher {
+public class Launcher extends Object {
 
 	public static void main(String[] args) {
 		
