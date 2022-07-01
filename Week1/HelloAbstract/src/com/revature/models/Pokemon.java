@@ -6,7 +6,7 @@ package com.revature.models;
 public abstract class Pokemon implements Creature {
 
 	//abstract classes can have variables
-	boolean fainted = false; //we'll give this a default value
+	public boolean fainted = false; //we'll give this a default value
 	public int level = 5; //this value will be 5 by default
 	
 	//concrete method - has an implementation (aka method body)
