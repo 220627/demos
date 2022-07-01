@@ -1,8 +1,10 @@
 package com.revature;
 
+import com.revature.exceptions.MyCheckedException;
+
 public class Launcher {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MyCheckedException {
 		
 		System.out.println("==========================(Throwing Some Runtime Exceptions)");
 		
@@ -56,8 +58,29 @@ public class Launcher {
 		
 		System.out.println("===================================(Using my custom CheckedException");
 		
+		throwChecked();
 		
+		//we can either put this method call in a try/catch, or a throws in the main method
+		//I'm going to opt for throws in the main method (which you shouldn't do because it will crash your program)
+		
+		//if we did a try/catch, we would put the method call in the try and catch a MyCheckedException or generic Exception
+		
+	} //end of the main method
+	
+	//creating a method that throws MyCheckedException
+	//methods that throw CheckedExceptions will not let you compile unless you add the "throws" clause. 
+	//by "throw"ing this exception, it makes the Exception handling the problem of the method that called it (main, in this case)
+	public static void throwChecked() throws MyCheckedException {
+		
+		System.out.println("I'm about to throw a checked exception!");
+		
+		//the throw keyword is how we manually throw exceptions
+		//Exceptions are OBJECTS (notice the "new" keyword), and we give it a String for its constructor (which takes a String).
+		throw new MyCheckedException("our custom exception was thrown!!");
 		
 	}
+	
+	//remember, the compiler CHECKS for CheckedExceptions hence the name
+	//so we need to handle them with a try/catch or throws clause before our application can run.
 	
 }
