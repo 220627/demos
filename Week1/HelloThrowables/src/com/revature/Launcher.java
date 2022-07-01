@@ -54,6 +54,10 @@ public class Launcher {
 		//rule of thumb for catch blocks, you want the most specific ones first, and the most generic ones last
 		//you can think of the generic Exception e catch as a catch-all block. it'll catch anything that slips through.
 		
+		System.out.println("===================================(Using my custom CheckedException");
+		
+		
+		
 	}
 	
 }
