@@ -1,61 +1,61 @@
 
-o	java:S106T"9Replace this use of System.out or System.err by a logger.(ç»èŒùÿÿÿÿ8šÅ´Üš0H6RMAJORZ
+k	java:S106o"9Replace this use of System.out or System.err by a logger.(³ÙÜ8ãæÜš0H“RMAJORZ
 CODE_SMELL
-k	java:S106j"9Replace this use of System.out or System.err by a logger.(ÎÌ’æ8ƒãÜš0HRMAJORZ
+k	java:S106W"9Replace this use of System.out or System.err by a logger.(Ú©ƒÂ8˜ÙºÜš0H”RMAJORZ
 CODE_SMELL
-k	java:S106o"9Replace this use of System.out or System.err by a logger.(³ÙÜ8ãæÜš0HRMAJORZ
+p	java:S106"9Replace this use of System.out or System.err by a logger.(·¸•Ëûÿÿÿÿ8æÚßØš0H•RMAJORZ
 CODE_SMELL
-e
-java:S1481F".Remove this unused "remainder" local variable.(äš…ëûÿÿÿÿ8¢ù°Üš0H.RMINORZ
+p	java:S106T"9Replace this use of System.out or System.err by a logger.(ç»èŒùÿÿÿÿ8šÅ´Üš0H–RMAJORZ
 CODE_SMELL
-j	java:S106W"9Replace this use of System.out or System.err by a logger.(Ú©ƒÂ8˜ÙºÜš0HJRMAJORZ
+k	java:S106]"9Replace this use of System.out or System.err by a logger.(Á€Õİ8ÒÓÈÜš0H—RMAJORZ
 CODE_SMELL
-z
-java:S1764T"JCorrect one of the identical sub-expressions on both sides of operator "-"(ç»èŒùÿÿÿÿ8Ÿş´Üš0H=RMAJORZBUG
-o	java:S106c"9Replace this use of System.out or System.err by a logger.(ˆÎ‹äùÿÿÿÿ8¾”ÑÜš0HaRMAJORZ
+p	java:S106`"9Replace this use of System.out or System.err by a logger.(úÄµşüÿÿÿÿ8ÒÓÈÜš0H˜RMAJORZ
 CODE_SMELL
-j	java:S1063"9Replace this use of System.out or System.err by a logger.(ˆËâá8ÛÊÜš0HRMAJORZ
+p	java:S106"9Replace this use of System.out or System.err by a logger.(Óßåşÿÿÿÿ8æãíØš0H™RMAJORZ
 CODE_SMELL
-o	java:S106""9Replace this use of System.out or System.err by a logger.(‡‚Ö¯ıÿÿÿÿ8É¦Ùš0HRMAJORZ
+k	java:S1063"9Replace this use of System.out or System.err by a logger.(ˆËâá8ÛÊÜš0HšRMAJORZ
 CODE_SMELL
-o	java:S106"9Replace this use of System.out or System.err by a logger.(·¸•Ëûÿÿÿÿ8æÚßØš0HRMAJORZ
+p	java:S1064"9Replace this use of System.out or System.err by a logger.(ˆ…òşÿÿÿÿ8ÛÊÜš0H›RMAJORZ
 CODE_SMELL
-o	java:S1064"9Replace this use of System.out or System.err by a logger.(ˆ…òşÿÿÿÿ8ÛÊÜš0HRMAJORZ
+f
+java:S1481F".Remove this unused "remainder" local variable.(äš…ëûÿÿÿÿ8¢ù°Üš0HœRMINORZ
 CODE_SMELL
-j	java:S106'"9Replace this use of System.out or System.err by a logger.(çÂ°¯8€¡Üš0HRMAJORZ
+o
+java:S25837"CChange this condition so that it does not always evaluate to "true"(¸²ç”8—Œ–Üš0HRMAJORZBUG
+k	java:S106"9Replace this use of System.out or System.err by a logger.(Áß‡Ü8Úß†Ùš0H RMAJORZ
 CODE_SMELL
-j	java:S106"9Replace this use of System.out or System.err by a logger.(èË²Š8úÔóØš0HRMAJORZ
+p	java:S106O"9Replace this use of System.out or System.err by a logger.(ª•Ÿ°ıÿÿÿÿ8¢ù°Üš0H¡RMAJORZ
 CODE_SMELL
-o	java:S106U"9Replace this use of System.out or System.err by a logger.(š€“æşÿÿÿÿ8êˆ·Üš0HDRMAJORZ
+p	java:S106M"9Replace this use of System.out or System.err by a logger.(ïŞ¿Öùÿÿÿÿ8¢ù°Üš0H¢RMAJORZ
 CODE_SMELL
-p	java:S106l"9Replace this use of System.out or System.err by a logger.(Šµå‰ûÿÿÿÿ8îÁãÜš0H‡RMAJORZ
+p	java:S106;"9Replace this use of System.out or System.err by a logger.(ó…‹Ïûÿÿÿÿ8—Œ–Üš0H£RMAJORZ
 CODE_SMELL
-j	java:S106]"9Replace this use of System.out or System.err by a logger.(Á€Õİ8ÒÓÈÜš0HURMAJORZ
+_
+java:S1481D",Remove this unused "product" local variable.(ä ĞÎ8¢ù°Üš0H¤RMINORZ
 CODE_SMELL
-j	java:S106*"9Replace this use of System.out or System.err by a logger.(´÷’Ë8Úı‚Üš0HRMAJORZ
+k	java:S1068"9Replace this use of System.out or System.err by a logger.(«ğÅÛ8—Œ–Üš0H¥RMAJORZ
 CODE_SMELL
-j	java:S106 "9Replace this use of System.out or System.err by a logger.(ŸÇğ‡8Úß†Ùš0HRMAJORZ
+k	java:S106"9Replace this use of System.out or System.err by a logger.(èË²Š8úÔóØš0H¦RMAJORZ
 CODE_SMELL
-o	java:S106M"9Replace this use of System.out or System.err by a logger.(ïŞ¿Öùÿÿÿÿ8¢ù°Üš0H(RMAJORZ
+p	java:S106U"9Replace this use of System.out or System.err by a logger.(š€“æşÿÿÿÿ8êˆ·Üš0H§RMAJORZ
 CODE_SMELL
-o	java:S106O"9Replace this use of System.out or System.err by a logger.(ª•Ÿ°ıÿÿÿÿ8¢ù°Üš0H)RMAJORZ
+p	java:S106S"9Replace this use of System.out or System.err by a logger.(õ¹åÓıÿÿÿÿ8šÅ´Üš0H¨RMAJORZ
 CODE_SMELL
-o	java:S106`"9Replace this use of System.out or System.err by a logger.(úÄµşüÿÿÿÿ8ÒÓÈÜš0HVRMAJORZ
+k	java:S106?"9Replace this use of System.out or System.err by a logger.(ÏÔëÆ8¢ù°Üš0H©RMAJORZ
 CODE_SMELL
-^
-java:S1481D",Remove this unused "product" local variable.(ä ĞÎ8¢ù°Üš0H,RMINORZ
+p	java:S106l"9Replace this use of System.out or System.err by a logger.(Šµå‰ûÿÿÿÿ8îÁãÜš0HªRMAJORZ
 CODE_SMELL
-j	java:S106"9Replace this use of System.out or System.err by a logger.(Áß‡Ü8Úß†Ùš0HRMAJORZ
+p	java:S106c"9Replace this use of System.out or System.err by a logger.(ˆÎ‹äùÿÿÿÿ8¾”ÑÜš0H«RMAJORZ
 CODE_SMELL
-j	java:S1068"9Replace this use of System.out or System.err by a logger.(«ğÅÛ8—Œ–Üš0HRMAJORZ
+p	java:S106""9Replace this use of System.out or System.err by a logger.(‡‚Ö¯ıÿÿÿÿ8É¦Ùš0H¬RMAJORZ
 CODE_SMELL
-o	java:S106"9Replace this use of System.out or System.err by a logger.(Óßåşÿÿÿÿ8æãíØš0HRMAJORZ
+k	java:S106j"9Replace this use of System.out or System.err by a logger.(ÎÌ’æ8ƒãÜš0H­RMAJORZ
 CODE_SMELL
-o	java:S106S"9Replace this use of System.out or System.err by a logger.(õ¹åÓıÿÿÿÿ8šÅ´Üš0H5RMAJORZ
+k	java:S106 "9Replace this use of System.out or System.err by a logger.(ŸÇğ‡8Úß†Ùš0H®RMAJORZ
 CODE_SMELL
-n
-java:S25837"CChange this condition so that it does not always evaluate to "true"(¸²ç”8—Œ–Üš0HRMAJORZBUG
-j	java:S106?"9Replace this use of System.out or System.err by a logger.(ÏÔëÆ8¢ù°Üš0H'RMAJORZ
+k	java:S106'"9Replace this use of System.out or System.err by a logger.(çÂ°¯8€¡Üš0H¯RMAJORZ
 CODE_SMELL
-o	java:S106;"9Replace this use of System.out or System.err by a logger.(ó…‹Ïûÿÿÿÿ8—Œ–Üš0HRMAJORZ
+{
+java:S1764T"JCorrect one of the identical sub-expressions on both sides of operator "-"(ç»èŒùÿÿÿÿ8Ÿş´Üš0H°RMAJORZBUG
+k	java:S106*"9Replace this use of System.out or System.err by a logger.(´÷’Ë8Úı‚Üš0H²RMAJORZ
 CODE_SMELL

@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.revature.models.Pirate"/>
+    <fullyQualifiedTypeName name="com.revature.models.StaticMethodClass"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.revature.models.Chikorita"/>
+    <fullyQualifiedTypeName name="com.revature.exceptions.MyCheckedException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.revature.models.Pokemon"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.TreeMap"/>
+</qualifiedTypeNameHistroy>
