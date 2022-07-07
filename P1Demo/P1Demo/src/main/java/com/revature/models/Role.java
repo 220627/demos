@@ -22,7 +22,7 @@ public class Role {
 		this.role_salary = role_salary;
 	}
 
-	//all args MINUS ID constructor. This is very common when working with JDBC applications
+	//all args MINUS ID constructor. This is very common when INSERTing data with JDBC applications
 	//these will come in handy when we need to INSERT more records, because role_id is handled by the serial datatype in the DB 
 	public Role(String role_title, int role_salary) {
 		super();
