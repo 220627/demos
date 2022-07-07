@@ -49,6 +49,8 @@ SELECT * FROM superheros;
 
 DROP TABLE superheros;
 
+DROP TABLE homes;
+
 --3NF---------------
 
 --Remove transitive dependencies, which can be done by separating data into seperate tables where possible
@@ -87,4 +89,53 @@ SELECT * FROM superheros;
 
 --cool, this database schema is now fully 3NF (which is what we want, and what your P1 should be)
 	  
+--(JOINS)---------------------------------------
+
+--Remember, joins are necessary when we want to SELECT data from multiple tables. Multi-table queries!
+
+--one more INSERT for each table to better demonstrate joins
+
+--this superhero has no home, it'll help demonstrate joins
+INSERT INTO superheros(hero_name, hero_power, first_name, last_name)
+VALUES ('Hancock', 'slappin'' people',  'Will', 'Smith');
+
+--this home will not have any hero with it as a home_base_fk
+INSERT INTO homes (home_name, street_address)
+VALUES ('Panera Bread', '1337 bread blvd');
+
+--note the keywords used in joins:
+--we specify the type of join, and what table/column we're joining ON
+
+--INNER JOIN
+--returns all records with matching data (from the PK/FK) in both table
+SELECT * FROM superheros INNER JOIN homes ON home_id = home_base_fk;
+--"select every record from superheros and homes where the home_id and home_base_fk match
+--Notice we don't get Hancock here, or Panera Bread, because they don't have any FK/PK matches
+
+--FULL OUTER JOIN
+--returns all records regardless of matches
+SELECT * FROM superheros FULL OUTER JOIN homes ON home_id = home_base_fk; 
+
+--LEFT OUTER JOIN
+--return everything in the LEFT TABLE, and matching rows in the right table
+SELECT * FROM superheros LEFT OUTER JOIN homes ON home_id = home_base_fk; 
+--we get hancock since superheros are on the left, but we don't get panera, because it's on the right
+
+--RIGHT OUTER JOIN
+--return everything in the RIGHT TABLE, and matching rows in the left table
+SELECT * FROM superheros RIGHT OUTER JOIN homes ON home_id = home_base_fk; 
+--we get panera since it's on the right table, but not hancock, because it's on the left with no matches.
+
+--Joins are how we make our select statements include more data (spanning multiple tables)
+--we can select * from superheros, and the most home data we would get is the home_id
+--what if we need all the data from heros and homes? Better use a join!
+
+--(SET OPERATIONS)--------------------------------------
+
+
+
+
+
+
+
 	  
