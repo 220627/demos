@@ -47,8 +47,44 @@ VALUES ('Homelander', 'laser eyes? pretty much superman... yeah', 'John', 'Doe',
 	  
 SELECT * FROM superheros; 
 
+DROP TABLE superheros;
 
+--3NF---------------
 
+--Remove transitive dependencies, which can be done by separating data into seperate tables where possible
+--Home data doesn't necessarily NEED to be in the superheros tables
 
+--create the homes table first, since superheros will have a reference (FK) to the homes table
 
+CREATE TABLE homes (
+	home_id serial PRIMARY KEY,
+	home_name TEXT,
+	street_address TEXT
+);
+
+CREATE TABLE superheros (
+	hero_id serial PRIMARY KEY, 
+	hero_name TEXT,
+	hero_power TEXT,
+	first_name TEXT,
+	last_name TEXT,
+	home_base_fk int REFERENCES homes(home_id)
+);
+
+INSERT INTO homes (home_name, street_address)
+VALUES ('Homelander''s house', '123 street st'),
+	   ('Aunt May''s house', '456 street ave');
+--if you need a single quote within single quotes, you have to type 2 single quotes
+
+SELECT * FROM homes;
+
+INSERT INTO superheros(hero_name, hero_power, first_name, last_name, home_base_fk)
+VALUES ('Homelander', 'laser eyes? pretty much superman... yeah', 'John', 'Doe', 1),
+	   ('Spiderman', 'webby boi', 'peter', 'parker', 2),
+	   ('Spiderman', 'webby boi', 'miles', 'morales', 2);
+
+SELECT * FROM superheros;
+
+--cool, this database schema is now fully 3NF (which is what we want, and what your P1 should be)
+	  
 	  
