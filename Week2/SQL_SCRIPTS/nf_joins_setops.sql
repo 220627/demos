@@ -132,9 +132,24 @@ SELECT * FROM superheros RIGHT OUTER JOIN homes ON home_id = home_base_fk;
 
 --(SET OPERATIONS)--------------------------------------
 
+SELECT * FROM superheros;
+SELECT * FROM homes;
 
+--UNION
+--All distinct records from both queries - no duplicates
+SELECT home_base_fk FROM superheros UNION SELECT home_id FROM homes;
 
+--UNION ALL
+--All distinct records from both queries - including duplicates
+SELECT home_base_fk FROM superheros UNION ALL SELECT home_id FROM homes;
 
+--INTERSECT
+--Returns unique rows (no duplicates) found in BOTH queries
+SELECT home_base_fk FROM superheros INTERSECT SELECT home_id FROM homes;
+
+--EXCEPT
+--Return unique rows (no duplicates) in the first query that DON'T appear in the second query
+SELECT home_base_fk FROM superheros EXCEPT SELECT home_id FROM homes;
 
 
 
