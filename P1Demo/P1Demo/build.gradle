@@ -17,7 +17,7 @@ repositories {
     jcenter()
 }
 
-//the didn't change anything above this line-------------------------------------------------------------
+//We didn't change anything above this line-------------------------------------------------------------
 
 //We need to set a Java version since gradle didn't give us one
 sourceCompatibility = 1.8
