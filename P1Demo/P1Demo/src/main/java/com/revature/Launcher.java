@@ -3,11 +3,17 @@ package com.revature;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.revature.daos.EmployeeDAO;
+import com.revature.models.Employee;
 import com.revature.utils.ConnectionUtil;
 
 public class Launcher {
-
+	
+	
 	public static void main(String[] args) {
+		
+		//Instantiate an EmployeeDAO so we can use its methods
+		EmployeeDAO eDAO = new EmployeeDAO();
 		
 		
 		System.out.println("========Welcome to the Krusty Krab Employee Management System========");
@@ -22,8 +28,18 @@ public class Launcher {
 			//if the connection fails to open, catch the resulting SQLException and print the stack trace (error log)
 			System.out.println("connection failed...");
 			e.printStackTrace();
-		}
+		} //end of the connection test
 		
-	}
+		
+		//INSERT an employee using the insertEmployee() method in EmployeeDAO
+		
+		//Instantiate an Employee Object
+		Employee newEmp = new Employee("Ben", "Fishman", null); //leaving Role as null for now (just using an int for RoleId)
+		
+		//call the insertEmployee() method
+		eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
+		
+		
+	} //end of main method
 	
 }
