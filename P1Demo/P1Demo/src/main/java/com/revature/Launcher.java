@@ -3,6 +3,7 @@ package com.revature;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.revature.controllers.EmployeeController;
 import com.revature.daos.EmployeeDAO;
 import com.revature.daos.RoleDAO;
 import com.revature.models.Employee;
@@ -48,6 +49,19 @@ public class Launcher {
 				).start(3000); //we need .start() to start our Java server on port 3000.
 				//This port is important, because this is where we need to send requests to.
 		
+		//We need to make some endpoint handlers, which will take in requests and send them where they need to go
+		//Javalin endpoint handlers are like a traffic cop to your Java server. They take HTTP traffic and direct it.
+		
+		//Instantiate an EmployeeController so that we can use its handlers
+		EmployeeController ec = new EmployeeController();
+		
+		//endpoint handlers below--------------------------
+		
+		//app.get() is the javalin method that takes in GET requests. It will return all employees from the DB.
+		//this handler takes in GET requests ending in /employees, and sends them to the getEmployeesHandler
+		//the request in postman would look something like: localhost:3000/employees
+		app.get("/employees", ec.getEmployeesHandler);
+		//what does /employees relate to? it's something we define. we want requests ending in /employees to get all employees
 		
 		
 		
