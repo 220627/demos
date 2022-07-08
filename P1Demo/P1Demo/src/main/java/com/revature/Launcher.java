@@ -33,10 +33,10 @@ public class Launcher {
 		
 		//INSERT an employee using the insertEmployee() method in EmployeeDAO
 		
-		//Instantiate an Employee Object
+		//Instantiate an Employee Object to insert
 		Employee newEmp = new Employee("Ben", "Fishman", null); //leaving Role as null for now (just using an int for RoleId)
 		
-		//call the insertEmployee() method
+		//call the insertEmployee() DAO method
 		eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
 		
 		

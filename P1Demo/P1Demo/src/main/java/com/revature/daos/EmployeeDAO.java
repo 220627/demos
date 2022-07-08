@@ -31,8 +31,9 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 		//these methods take two parameters - the variable we'll filling, and the value to fill it with
 		ps.setString(1, employee.getFirst_name()); //by "1" here, we're referring to the first question mark in the SQL String.
 		ps.setString(2, employee.getLast_name());
-		ps.setInt(3, role_id); //will probably refactor this later to go through the Role object of Employee.
-		
+		ps.setInt(3, role_id); //PreparedStatement doesn't have a setRole() method, 
+							   //so we can just use the id here, because it takes an int on the database side
+			
 		//we've created the SQL String and filled it with data - now we need to EXECUTE THE STATEMENT!
 		ps.executeUpdate(); //This is what actually sends our SQL off to the database.
 		
