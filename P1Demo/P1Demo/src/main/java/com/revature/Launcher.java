@@ -9,11 +9,14 @@ import com.revature.models.Employee;
 import com.revature.models.Role;
 import com.revature.utils.ConnectionUtil;
 
+import io.javalin.Javalin;
+
 public class Launcher {
 	
 	
 	public static void main(String[] args) {
 		
+		//****These aren't being used anymore, DAO methods are now called in the Controller layer
 		//Instantiate an EmployeeDAO and RoleDAO so we can use their methods
 		EmployeeDAO eDAO = new EmployeeDAO();
 		RoleDAO rDAO = new RoleDAO();
@@ -33,19 +36,20 @@ public class Launcher {
 			e.printStackTrace();
 		} //end of the connection test
 			
-		//INSERT an employee using the insertEmployee() method in EmployeeDAO
 		
-		//Instantiate an Employee Object to insert
-		//Employee newEmp = new Employee("Ben", "Fishman", null); //leaving Role as null for now (just using an int for RoleId)
+		//Typical Javalin syntax to CREATE a javalin object 
+		Javalin app = Javalin.create(
+				
+				//the config lambda lets us specify certain configurations for our Javalin app.
+				config -> {
+					config.enableCorsForAllOrigins(); //this lets us process HTTP requests from any origin
+				}
+				
+				).start(3000); //we need .start() to start our Java server on port 3000.
+				//This port is important, because this is where we need to send requests to.
 		
-		//call the insertEmployee() DAO method
-		//eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
 		
-		//select a Role by id using the getRoleById() method
-		System.out.println(rDAO.getRoleById(4));
 		
-		//select all employees using getEmployees() method
-		System.out.println(eDAO.getEmployees());
 		
 	} //end of main method
 	

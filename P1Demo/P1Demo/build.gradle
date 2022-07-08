@@ -37,4 +37,8 @@ dependencies {
     //We need a postgresql dependency. I'm getting this one from mvnrepository.com, which is a website full of dependencies
     //https://mvnrepository.com/artifact/org.postgresql/postgresql
 	implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+	
+	//Javalin dependency so that we can expose REST endpoints and send responses to the front end
+    compile group: 'io.javalin', name: 'javalin', version: '3.13.3'
+    compile "org.slf4j:slf4j-simple:1.7.30" //we had to add this according to the console
 }
