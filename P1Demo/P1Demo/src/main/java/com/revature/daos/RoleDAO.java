@@ -51,10 +51,8 @@ public class RoleDAO implements RoleDAOInterface {
 				return role; //return the Role data to the user!
 				
 				//In this case, we know we're only going to get one role, so we can return from within the while loop
-				//If we were getting multiple records (like in get all employees), we would do it a little different.
-				
+				//If we were getting multiple records (like in get all employees), we would do it a little different.	
 			}
-			
 			
 		} catch (SQLException e) {
 			System.out.println("Get Role failed"); //tell the console it failed

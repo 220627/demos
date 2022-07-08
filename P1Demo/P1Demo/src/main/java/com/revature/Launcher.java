@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.revature.daos.EmployeeDAO;
+import com.revature.daos.RoleDAO;
 import com.revature.models.Employee;
+import com.revature.models.Role;
 import com.revature.utils.ConnectionUtil;
 
 public class Launcher {
@@ -12,8 +14,9 @@ public class Launcher {
 	
 	public static void main(String[] args) {
 		
-		//Instantiate an EmployeeDAO so we can use its methods
+		//Instantiate an EmployeeDAO and RoleDAO so we can use their methods
 		EmployeeDAO eDAO = new EmployeeDAO();
+		RoleDAO rDAO = new RoleDAO();
 		
 		
 		System.out.println("========Welcome to the Krusty Krab Employee Management System========");
@@ -34,10 +37,14 @@ public class Launcher {
 		//INSERT an employee using the insertEmployee() method in EmployeeDAO
 		
 		//Instantiate an Employee Object to insert
-		Employee newEmp = new Employee("Ben", "Fishman", null); //leaving Role as null for now (just using an int for RoleId)
+		//Employee newEmp = new Employee("Ben", "Fishman", null); //leaving Role as null for now (just using an int for RoleId)
 		
 		//call the insertEmployee() DAO method
-		eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
+		//eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
+		
+		
+		//select a Role by id using the getRoleById() method
+		System.out.println(rDAO.getRoleById(4));
 		
 		
 	} //end of main method
