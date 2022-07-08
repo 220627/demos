@@ -32,8 +32,7 @@ public class Launcher {
 			System.out.println("connection failed...");
 			e.printStackTrace();
 		} //end of the connection test
-		
-		
+			
 		//INSERT an employee using the insertEmployee() method in EmployeeDAO
 		
 		//Instantiate an Employee Object to insert
@@ -42,10 +41,11 @@ public class Launcher {
 		//call the insertEmployee() DAO method
 		//eDAO.insertEmployee(newEmp, 2); //role 2 == Fry Cook
 		
-		
 		//select a Role by id using the getRoleById() method
 		System.out.println(rDAO.getRoleById(4));
 		
+		//select all employees using getEmployees() method
+		System.out.println(eDAO.getEmployees());
 		
 	} //end of main method
 	
