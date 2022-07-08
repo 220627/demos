@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.revature.daos.EmployeeDAO;
 
-public class EmployeeDAOTest {
+public class eDAOTest {
 
 	@Test
 	public void testGetEmployees() {
