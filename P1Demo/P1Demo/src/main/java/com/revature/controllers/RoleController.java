@@ -18,6 +18,7 @@ public class RoleController {
 		
 		//int to hold the new Role salary, which the user will include in the BODY of the HTTP Request
 		int salary = Integer.parseInt(ctx.body()); //we need to use parseInt here, because ctx.body() returns a String
+		//in postman, no need to make a JSON object, we can just input whatever number we want.
 		
 		//if the update DAO method returns true (which means successful)..
 		if(rDAO.updateRoleSalary(title, salary)) {
