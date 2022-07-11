@@ -64,8 +64,33 @@ public class RoleDAO implements RoleDAOInterface {
 	} //end of select by id method
 
 	@Override
-	public void updateRoleSalary(String title, int salary) {
-		// TODO Auto-generated method stub
+	public boolean updateRoleSalary(String title, int salary) {
+		
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			//SQL String for our UPDATE command
+			String sql = "update roles set role_salary = ? where role_title = ?;";
+			
+			//create our PreparedStatement to fill in the variables
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			//input the appropriate values into our PreparedStatement
+			ps.setInt(1, salary);
+			ps.setString(2, title);
+			
+			//execute the update!
+			ps.executeUpdate();
+			
+			//tell the console the update was successfully 
+			System.out.println(title + " has been updated to " + salary);
+			
+		} catch (SQLException e) {
+			System.out.println("FAILED TO UPDATE");
+			e.printStackTrace();
+		}
+		
+		
+		return false; //if update fails, return false
 		
 	}
 

@@ -60,7 +60,6 @@ public class EmployeeController {
 		if(eDAO.insertEmployee(newEmp)) {
 			//return a successful status code
 			ctx.status(202); //202 stands for "accepted"\
-			
 		} else {
 			ctx.status(406); //406 stands for "Not Acceptable", AKA whatever the user sent couldn't be added to the DB
 		}

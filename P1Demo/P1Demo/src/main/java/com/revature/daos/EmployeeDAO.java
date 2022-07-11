@@ -37,7 +37,9 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 		ps.setString(2, employee.getLast_name());
 		ps.setInt(3, employee.getRole_id_fk()); //PreparedStatement doesn't have a setRole() method, 
 							   //so we can just use the id here, because it takes an int on the database side
-			
+		
+		System.out.println(ps);
+		
 		//we've created the SQL String and filled it with data - now we need to EXECUTE THE STATEMENT!
 		ps.executeUpdate(); //This is what actually sends our SQL off to the database.
 		

@@ -9,7 +9,7 @@ public interface RoleDAOInterface {
 	Role getRoleById(int id);
 	
 	//a method that updates the salary data for a given role
-	void updateRoleSalary(String title, int salary);
+	boolean updateRoleSalary(String title, int salary);
 	
 	//ctrl + shift + o to import unimported Classes 
 	
