@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.revature.controllers.EmployeeController;
+import com.revature.controllers.RoleController;
 import com.revature.daos.EmployeeDAO;
 import com.revature.daos.RoleDAO;
 import com.revature.models.Employee;
@@ -55,6 +56,9 @@ public class Launcher {
 		//Instantiate an EmployeeController so that we can use its handlers
 		EmployeeController ec = new EmployeeController();
 		
+		//Instantiate a RoleController so that we can use its handler
+		RoleController rc = new RoleController();
+		
 		//endpoint handlers below--------------------------
 		
 		//app.get() is the javalin method that takes in GET requests. It will return all employees from the DB.
@@ -66,6 +70,12 @@ public class Launcher {
 		//app.post() is the javalin method that takes in POST requests. It will insert employee data into the DB.
 		//how come we can have two endpoints of "/employees"? that's because one is for a GET, while the other is a POST
 		app.post("/employees", ec.insertEmployeeHandler);
+		
+		//app.put() is a javalin method that takes PUT requests. 
+		//It will take in two pieces of data: the role title (in the path parameter) and the salary (in the Request body)
+		//:title? This is a PATH PARAMETER. Whatever the user inserts here in the request will be used in the controller
+		app.put("/roles/:title", rc.updateSalaryHandler);
+		
 		
 	} //end of main method
 	
