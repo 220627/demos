@@ -17,7 +17,7 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 
 	//method that inserts data into the DB
 	@Override
-	public void insertEmployee(Employee employee, int role_id) {
+	public boolean insertEmployee(Employee employee) {
 		
 		//at the top of EVERY DAO METHOD, we need to open a database connection.
 		try(Connection conn = ConnectionUtil.getConnection()){
@@ -35,7 +35,7 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 		//these methods take two parameters - the variable we'll filling, and the value to fill it with
 		ps.setString(1, employee.getFirst_name()); //by "1" here, we're referring to the first question mark in the SQL String.
 		ps.setString(2, employee.getLast_name());
-		ps.setInt(3, role_id); //PreparedStatement doesn't have a setRole() method, 
+		ps.setInt(3, employee.getRole_id_fk()); //PreparedStatement doesn't have a setRole() method, 
 							   //so we can just use the id here, because it takes an int on the database side
 			
 		//we've created the SQL String and filled it with data - now we need to EXECUTE THE STATEMENT!
@@ -43,11 +43,15 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 		
 		//Tell the user the insert was successful
 		System.out.println("Employee " + employee.getFirst_name() + " was added!");
+		
+		return true; //if the update is successful, true will get returned
 			
 		} catch (SQLException e) { //if anything goes wrong, this SQLException will get thrown
 			System.out.println("INSERT EMPLOYEE FAILED"); //tell the console we failed
 			e.printStackTrace(); //print out the error log, which we'll need for debugging
 		}
+		
+		return false; //if it fails, we'll get here (instead of the "return true" in the try block) 
 		
 	} //end of insertEmployee()
 
@@ -91,7 +95,7 @@ public class EmployeeDAO implements EmployeeDAOInterface {
 				//we need to use the RoleDAO method to get a role by ID.
 				int roleFK = rs.getInt("role_id_fk");
 				
-				//Instantiate a RoleDAO se we can use getRoleById
+				//Instantiate a RoleDAO so we can use getRoleById
 				RoleDAO rDAO = new RoleDAO();
 				
 				//get a Role object using the int that we populate with rs.getInt()!!!!

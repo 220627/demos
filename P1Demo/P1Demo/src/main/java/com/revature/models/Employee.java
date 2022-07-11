@@ -9,12 +9,24 @@ public class Employee {
 	private String last_name;
 	//Every employee in this application has a role, so we'll give a Role object as a variable
 	private Role role;
+	
+	//make a variable for int roleId for inserting Employees. This constructor will only be used when inserting
+	//because remember, the role_id_fk is an int on the DB side. This saves us from doing quirky conversions
+	private int role_id_fk;
 
 	
 	//boilerplate code----------------
 	
-	//check the Role class for explanations on some of this boilerplate code
+	//check the Role class for more explanations on some of this boilerplate code
 	
+	public int getRole_id_fk() {
+		return role_id_fk;
+	}
+
+	public void setRole_id_fk(int role_id_fk) {
+		this.role_id_fk = role_id_fk;
+	}
+
 	//no args constructor
 	public Employee() {
 		super();
@@ -38,6 +50,14 @@ public class Employee {
 		this.role = role;
 	}
 
+	//first_name, last_name, role_id constructor so that we can insert employees to the DB easier (role is an int in the DB) 
+	public Employee(String first_name, String last_name, int role_id_fk) {
+		super();
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.role_id_fk = role_id_fk;
+	}
+	
 	@Override
 	public String toString() {
 		return "Employee [employee_id=" + employee_id + ", first_name=" + first_name + ", last_name=" + last_name

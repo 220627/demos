@@ -14,7 +14,7 @@ public interface EmployeeDAOInterface {
 	//A good way to quickly reference the methods found in the very code heavy DAO Classes.
 	
 	//A method to insert a new employee
-	void insertEmployee(Employee employee, int role_id);
+	boolean insertEmployee(Employee employee);
 	
 	//A method to get all employees
 	ArrayList<Employee> getEmployees();
