@@ -63,7 +63,9 @@ public class Launcher {
 		app.get("/employees", ec.getEmployeesHandler);
 		//what does /employees relate to? it's something we define. we want requests ending in /employees to get all employees
 		
-		
+		//app.post() is the javalin method that takes in POST requests. It will insert employee data into the DB.
+		//how come we can have two endpoints of "/employees"? that's because one is for a GET, while the other is a POST
+		app.post("/employees", ec.insertEmployeeHandler);
 		
 	} //end of main method
 	
