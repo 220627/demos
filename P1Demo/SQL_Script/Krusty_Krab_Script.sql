@@ -27,4 +27,16 @@ VALUES ('Eugene', 'Krabs', 1),
 	   ('Squidward', 'Tentacles', 3),
 	   ('Patrick', 'Star', 4);
 
-SELECT * FROM employees;	  
+SELECT * FROM employees;
+
+
+CREATE TABLE users (
+	user_id serial PRIMARY KEY,
+	username TEXT,
+	PASSWORD text
+);
+
+INSERT INTO users (username, password)
+VALUES ('user', 'password');
+
+
