@@ -3,6 +3,7 @@ package com.revature;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.revature.controllers.AuthController;
 import com.revature.controllers.EmployeeController;
 import com.revature.controllers.RoleController;
 import com.revature.daos.AuthDAO;
@@ -60,6 +61,9 @@ public class Launcher {
 		//Instantiate a RoleController so that we can use its handler
 		RoleController rc = new RoleController();
 		
+		//Instantiate an AuthController... you know why hopefully :)
+		AuthController ac = new AuthController();
+		
 		//endpoint handlers below--------------------------
 		
 		//app.get() is the javalin method that takes in GET requests. It will return all employees from the DB.
@@ -79,13 +83,8 @@ public class Launcher {
 		
 		app.delete("/delete/:id", ec.deleteEmployeeHandler);
 		
-		
-		
-		AuthDAO aDAO = new AuthDAO();
-		
-		System.out.println(aDAO.login("user", "password"));
-		
-		
+		//endpoint handler for login
+		app.post("/login", ac.loginHandler);
 		
 	} //end of main method
 	
