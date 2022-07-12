@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.revature.controllers.EmployeeController;
 import com.revature.controllers.RoleController;
+import com.revature.daos.AuthDAO;
 import com.revature.daos.EmployeeDAO;
 import com.revature.daos.RoleDAO;
 import com.revature.models.Employee;
@@ -77,6 +78,14 @@ public class Launcher {
 		app.put("/roles/:title", rc.updateSalaryHandler);
 		
 		app.delete("/delete/:id", ec.deleteEmployeeHandler);
+		
+		
+		
+		AuthDAO aDAO = new AuthDAO();
+		
+		System.out.println(aDAO.login("user", "password"));
+		
+		
 		
 	} //end of main method
 	
