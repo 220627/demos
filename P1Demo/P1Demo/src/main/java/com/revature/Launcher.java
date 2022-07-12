@@ -76,6 +76,7 @@ public class Launcher {
 		//:title? This is a PATH PARAMETER. Whatever the user inserts here in the request will be used in the controller
 		app.put("/roles/:title", rc.updateSalaryHandler);
 		
+		app.delete("/delete/:id", ec.deleteEmployeeHandler);
 		
 	} //end of main method
 	

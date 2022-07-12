@@ -65,5 +65,16 @@ public class EmployeeController {
 		}
 		
 	};
+	
+	public Handler deleteEmployeeHandler = (ctx) -> {
+		
+		int youreFired = Integer.valueOf(ctx.pathParam("id"));
+		
+		eDAO.deleteEmployee(youreFired);
+		
+		ctx.result("Employee " + youreFired + " terminated");
+		ctx.status(200);
+		
+	};
 
 }

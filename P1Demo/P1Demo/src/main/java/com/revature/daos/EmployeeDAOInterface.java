@@ -21,7 +21,7 @@ public interface EmployeeDAOInterface {
 	
 	
 	//A method to delete employees
-
+	public void deleteEmployee(int id);
 	
 	//Potentially a method to get employees by role title (which would require a join)
 	
