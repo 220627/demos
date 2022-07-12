@@ -14,7 +14,7 @@ public class AuthController {
 	AuthService as = new AuthService();
 	
 	//empty HttpSession object that will be filled upon successful login
-	static HttpSession ses;
+	public static HttpSession ses;
 	
 	//we need a loginHandler to take in Login Data, make a LoginDTO, and send it to the service
 	//if login is successful, the service sends back a String which we use in our return (ctx.result())

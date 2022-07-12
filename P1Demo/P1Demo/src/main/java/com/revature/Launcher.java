@@ -82,8 +82,7 @@ public class Launcher {
 		app.put("/roles/:title", rc.updateSalaryHandler);
 		
 		app.delete("/delete/:id", ec.deleteEmployeeHandler);
-		
-		//endpoint handler for login
+	
 		app.post("/login", ac.loginHandler);
 		
 	} //end of main method
