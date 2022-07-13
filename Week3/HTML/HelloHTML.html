@@ -88,6 +88,35 @@
 
     <!--Forms---------------------------------------------------------------------->
 
+    <br><br><br><br>
+
+    <form> <!-- A form's input elements must be within this form tag -->
+
+    <input type="text" name="username" placeholder="enter your username">
+    <label for="username">Enter your name to Log In</label>
+    <!-- The "for" attribute of the label tag is looking for a "name" attribute to match-->
+    <!-- In other words, it's looking for a unique identifier to attach a label to-->
+
+
+    <br> <!-- Not beautiful but  didn't want these on the same line-->
+
+    <input type="password" name="password" placeholder="enter your password">
+    <label for="password">Enter your password to Log In</label>
+
+    <h6>You Must Choose:</h6>
+
+    <!--Generated with input:radio-->
+    <input type="radio" name="radio" id="radio1">
+    <!--Generated with label[for="radio1"]-->
+    <label for="radio1">I WILL CHOOSE</label>
+
+    <input type="radio" name="radio" id="radio2">
+    <!--Generated with label[for="radio2"]{I WILL NOT CHOOSE}-->
+    <label for="radio2">I WILL NOT CHOOSE</label>
+
+    <!--Radio buttons must use the same name, in order to group them together-->
+
+    </form>
 
 
 </body>
