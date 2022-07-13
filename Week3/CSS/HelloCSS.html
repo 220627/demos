@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelloHTML</title>
 
+    <!-- This is how we can link to our external stylesheet (considered best practice for styling HTML)-->
+    <link rel="stylesheet" href="HelloCSS.css">
+
+    <!-- This is a link to a bootstrap stylesheet (very easy way to use nice looking generic stylings) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- One way to style CSS: style tag in the head. Not commonly used. -->
     <style>
 
@@ -37,6 +43,52 @@
 
 <body> <!-- The actual content of the webpage goes here -->
 
+<!-- Some divs to demonstrate the Bootstrap Grid System -->
+<!-- Bootstrap has rows with a size of 12. We can work with this to format elements on our page -->
+<div class="row">
+
+    <div class="col-sm-3">I'm a div that takes up a 4th of a row</div>
+    <div class="col-sm-3">I'm another div that takes up a 4th of a row</div>
+    <div class="col-sm-6">I'm a div that takes up half of a row</div>
+    <div class="col-sm-6">I'm another div that takes up half of a row</div>
+    <div class="col-sm-12">I'm a div that takes up a full row</div>
+
+</div>
+
+
+<!-- Ben struggled to find a bootstrap component that looked nice, settled for a table -->
+
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    
     <!-- One way to style CSS: INLINE STYLING. Not best practice, but super convenient-->
     <h1 style="background-color:burlywood; color:midnightblue;">Hello HTML. I am a front end developer now!</h1> <!-- h1 is the largest header tag (h6 is smallest)-->
 
@@ -60,7 +112,7 @@
 
     <!--Lists---------------------------------------------------------------------->
 
-    <div>
+    <div id="listDiv">
 
         <h2>Our Favorite Animals</h2>
 
@@ -98,19 +150,19 @@
         <tbody> <!--The actual data in the table-->
             <tr> <!--every tr is a new row of data-->
                 <td>Daniel</td> <!--td is a cell of data-->
-                <td>Strawberry</td>
+                <td style="color:red">Strawberry</td>
             </tr>
             <tr>
                 <td>Genesis</td>
-                <td>Peach</td>
+                <td style="color:peachpuff">Peach</td>
             </tr>
             <tr>
                 <td>Elliott</td>
-                <td>Blueberry</td>
+                <td style="color:blue">Blueberry</td>
             </tr>
             <tr>
                 <td>Frederick</td>
-                <td>Orange</td>
+                <td style="color:orange">Orange</td>
             </tr>
         </tbody>
     </table>

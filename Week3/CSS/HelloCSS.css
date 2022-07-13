@@ -1,0 +1,19 @@
+/* This is a CSS comment, I autogenereated it with ctrl + / */
+
+/* we can use the * selector to apply univeral styling */
+*{
+    background-color:darksalmon;
+}
+
+li{
+    transform: rotate(176deg) scaleX(-1);
+    margin: 20px;
+    border: 5px dotted crimson;
+    padding: 15px;
+}
+
+#listDiv{
+    transform: rotate(7deg) scaleX(-1);
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
