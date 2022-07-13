@@ -6,13 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelloHTML</title>
+
+    <!-- One way to style CSS: style tag in the head. Not commonly used. -->
+    <style>
+
+        /* Class Selector - applies styling to all elements of a given class */
+        .paragraph{
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: bold;
+            color: cyan;
+            text-align: center;
+        }
+
+        /* ID Selector - applies styling to the element with the given ID */
+        #myTable{
+            border: 3px double darkslategray;
+            border-radius: 5%;
+        }
+
+        /* Element Selector applies to all instances of a certain element */
+        td{
+            border: 2px solid sandybrown;
+            border-radius: 7px;
+        }
+
+    </style>
+
 </head>
 
 <body> <!-- The actual content of the webpage goes here -->
 
-    <h1>Hello HTML. I am a front end developer now!</h1> <!-- h1 is the largest header tag (h6 is smallest)-->
+    <!-- One way to style CSS: INLINE STYLING. Not best practice, but super convenient-->
+    <h1 style="background-color:burlywood; color:midnightblue;">Hello HTML. I am a front end developer now!</h1> <!-- h1 is the largest header tag (h6 is smallest)-->
 
-    <p>I just built my own webpage</p> <p>Despite being on the same line in HTML, we're on separate lines</p>
+    <p class="paragraph">I just built my own webpage</p>
+    <p class="paragraph">I'm another paragraph element</p>
     <!-- Recall that <p> elements are BLOCK elements, so they never share the same line -->
 
     <!-- What if I want inline text elements? You'll probably want <span> -->
@@ -59,7 +88,7 @@
 
     <!-- Generated with table>thead>tr>th*2^^tbody>tr*4>td*2-->
 
-    <table> <!--Start a table with this-->
+    <table id="myTable"> <!--Start a table with this-->
         <thead> <!--Start a header row for the table-->
             <tr> <!--an actual row in the table-->
                 <th>Name</th> <!--Data cells for header rows-->
@@ -85,53 +114,6 @@
             </tr>
         </tbody>
     </table>
-
-    <!--Forms---------------------------------------------------------------------->
-
-    <br><br><br><br>
-
-    <form> <!-- A form's input elements must be within this form tag -->
-
-    <input type="text" name="username" placeholder="enter your username">
-    <label for="username">Enter your name to Log In</label>
-    <!-- The "for" attribute of the label tag is looking for a "name" attribute to match-->
-    <!-- In other words, it's looking for a unique identifier to attach a label to-->
-
-
-    <br> <!-- Not beautiful but  didn't want these on the same line-->
-
-    <input type="password" name="password" placeholder="enter your password">
-    <label for="password">Enter your password to Log In</label>
-
-    <h2>You Must Choose:</h2>
-
-    <!--Generated with input:radio-->
-    <input type="radio" name="radio" id="radio1">
-    <!--Generated with label[for="radio1"]-->
-    <label for="radio1">I WILL CHOOSE</label>
-
-    <input type="radio" name="radio" id="radio2">
-    <!--Generated with label[for="radio2"]{I WILL NOT CHOOSE}-->
-    <label for="radio2">I WILL NOT CHOOSE</label>
-
-    <!--Radio buttons must use the same name, in order to group them together-->
-
-    <h3>How Do You Feel About Your Choice?</h3>
-
-    <!-- Generated with input:checkbox[name="checkbox"]-->
-    <input type="checkbox" name="checkbox" id="choice1">
-    <label for="choice1">Ecstatic</label>
-
-    <input type="checkbox" name="checkbox" id="choice2">
-    <label for="choice2">Somber</label>
-
-    <input type="checkbox" name="checkbox" id="choice3">
-    <label for="choice3">Pensive</label>
-
-    <input type="checkbox" name="checkbox" id="choice4">
-    <label for="choice4">Indifferent</label>
-
-    </form>
 
     <!--Article & Summary Semantic Tags------------------------------------------------------------>
 
@@ -174,7 +156,6 @@
         <p>I cant believe you would click me how dare you click me I am a strong independent p element and I wish people
             would treat me a such!!!!!!</p>
     </details>
-
 
 </body>
 
