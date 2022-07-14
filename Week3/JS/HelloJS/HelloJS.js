@@ -46,5 +46,30 @@ console.log("string plus num plus num is: " + typeof tc7)
 
 //"It's all math UNTIL a String gets put in the mix"
 
-console.log("======================================(Truthy/Falsy")
+console.log("======================================(Truthy/Falsy)")
 
+//I want to write a function that compares two vars
+function testTrueFalse(var1, var2){
+    console.log(var1 + " compared to " + var2)
+    console.log(var1 == var2) //== compares VALUE, as opposed to === which compares VALUE and TYPE 
+}
+
+testTrueFalse(0, false) //true, 0 is falsy
+testTrueFalse(1, true) //true, 1 is truthy
+testTrueFalse(2, false) //false, 2 is truthy
+testTrueFalse(2, true) //false... what???? see below
+testTrueFalse() //undefined == undefined, true
+
+//while 2 IS considered truthy, the boolean true is evaluted to the number 1, while boolean false is evaluated to 0.
+//so comparing any number besides 1 to true will return false
+
+//a if statement to drive the point home
+if(2){
+    console.log("any number besides 0 is truthy")
+}
+
+if(2 == true) {
+
+} else{
+    console.log("however, any number besides 1 IS NOT considered equal to 'true', despite being truthy")
+}
