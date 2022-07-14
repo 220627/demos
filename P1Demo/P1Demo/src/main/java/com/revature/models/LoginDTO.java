@@ -5,6 +5,10 @@ package com.revature.models;
 //This HTTP Request data gets sent to the controller, to get turned into a Java object using GSON.
 //the username and password the user sends in will be put into this DTO as variables, which we'll check in the authService
 //You NEVER store a DTO in the database. It's purely for DATA TRANSFER... 
+
+//Two Main DTO Uses Cases:
+//1: When you don't want to send or use an entire object (we just need a username/password here)
+//2: When you don't intend for the incoming data to be stored in the database
 public class LoginDTO {
 
 	//the loginDTO models ONLY the username/password sent in by the user
