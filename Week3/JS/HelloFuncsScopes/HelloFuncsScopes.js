@@ -65,7 +65,59 @@ HelloName(); //Hello Jamie prints out no matter what now
 
 console.log("===========================================(Global Scopes)")
 
+console.log(a); //prints undefined - 
+//why not an error? the declaration was hoisted (var)
 
+var a = 5; //here, we actually give the var a value 
 
+//so now its value it visible
+console.log(a);
+
+//console.log(b);
+//ERROR - b is a let, so its not hoisted, thus not visible
+
+let b = 10;
+
+console.log("now I can print the value of b: " + b);
+
+//see an example of function hoisting above
 
 console.log("===========================================(Local Scopes)")
+
+//block scope----------------------
+
+//undefined, it's a var, but undefined here
+console.log(c);
+
+if(true){
+    var c = "I'm a var in a block. Block scoped!"
+    console.log(c);
+}
+
+console.log(c); 
+//Now, the variable is visible despite block scoped, since it's a var
+
+if(true){
+    let d = "I'm a let in a block. Block scoped!"
+    console.log(d)
+}
+
+//console.log(d);
+//another reference error!! let is not hoisted, thus out of scope here
+
+//functional scope--------------------
+
+function scopeTest(){
+    console.log(e);
+    var e = "I'm a var in functional scope!"
+    console.log(e);
+}
+
+//console.log(e);
+//We get a reference error here, even though e is a var
+
+scopeTest();
+
+//the main difference between block/functional is...
+//vars are not visible outside of functions
+//but they are visible outside of regular blocks.
