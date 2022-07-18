@@ -51,6 +51,8 @@ function renderHTML(data) {
     //pokepic will be a little different, we need to set the src attribute of the <img> tag
     pokepic.setAttribute("src", data.sprites.front_default)
 
+    pokepic2.setAttribute("src", data.sprites.front_shiny)
+
  }
 
 }
