@@ -19,6 +19,8 @@
 
         <h3>Welcome to the Krusty Krab Employee Management System</h3>
 
+        <br><br><br>
+
         <!-- in our P0, we were sending and recieving data with postman -->
         <!-- But now, we have a webpage and we need a way to store the data we gather -->
         <!-- I want a table of employee information which we'll SELECT from the DB. -->
@@ -27,7 +29,7 @@
         <!-- This class name is for bootstrap, it will be styled as a bootstrap row-->
         <div id="table-row" class="row">
 
-            <table class="table">
+            <table class="table table-dark table-bordered table-hover table-striped">
                 <thead>
                     <tr>
                         <th>ID</th> 
@@ -36,16 +38,19 @@
                         <th>Role</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="employeeBody">
 
                     <!-- We'll leave this blank for now - it will be filled with data by our JS -->
 
                 </tbody>
             </table>
-
         </div>
+
+        <button id="getEmployeeButton" class="btn btn-info">Show Employees</button>
 
     </div>
 
+    
+    <script src="krustyKrab.js"></script>
 </body>
 </html>
