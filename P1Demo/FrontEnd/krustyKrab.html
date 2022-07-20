@@ -12,14 +12,23 @@
 </head>
 
 <body>
-    
+
     <!-- generated with div.container -->
     <!-- a div with a class of "container" makes it so that bootstrap will be applied for this div-->
     <div class="container">
 
         <h3>Welcome to the Krusty Krab Employee Management System</h3>
 
-        <br><br><br>
+        <br>
+
+        <div id="loginRow" class="row">
+            <h4 id="welcomeHead">Please Enter Your Login Credentials:</h4>
+            <input type="text" id="username">
+            <input type="password" id="password">
+            <button id="loginButton" class="btn col-sm-1 btn-warning">Login</button>
+        </div>
+
+        <br>
 
         <!-- in our P0, we were sending and recieving data with postman -->
         <!-- But now, we have a webpage and we need a way to store the data we gather -->
@@ -45,12 +54,20 @@
                 </tbody>
             </table>
         </div>
-
         <button id="getEmployeeButton" class="btn btn-info">Show Employees</button>
+    
+        <br><br>
 
+    <h4>Enter role title and new salary</h4>
+
+        <div class="row">
+
+            <input type="text" id="roleTitle" placeholder="Role Title">
+            <input type="number" id="salary" placeholder="New Salary">
+
+        </div>
     </div>
 
-    
     <script src="krustyKrab.js"></script>
 </body>
 </html>

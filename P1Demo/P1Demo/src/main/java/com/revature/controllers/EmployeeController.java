@@ -23,7 +23,7 @@ public class EmployeeController {
 		//what is ctx? it's the Context object! 
 		//This object contains a bunch of method that we can use to take in HTTP Requests and send HTTP Responses
 		
-		if(AuthController.ses == null) { //if the user is logged in, they can access this functionality
+		if(AuthController.ses != null) { //if the user is logged in, they can access this functionality
 		
 		//We need an ArrayList of Employees, courtesy of our EmployeeDAO
 		ArrayList<Employee> employees = eDAO.getEmployees();
