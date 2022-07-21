@@ -59,6 +59,8 @@ public class Role {
 	public void setRole_salary(int role_salary) {
 		this.role_salary = role_salary;
 	}
+
+
 	
 	
 }

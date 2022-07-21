@@ -2,17 +2,20 @@ package com.revature;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.anyInt;
+import static org.mockito.Mockito.when;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.Spy;
+import org.mockito.*;
+import org.mockito.stubbing.OngoingStubbing;
 
 import com.revature.daos.EmployeeDAO;
+import com.revature.daos.RoleDAO;
 import com.revature.models.Employee;
+import com.revature.models.Role;
 import com.revature.utils.ConnectionUtil;
 
 public class eDAOTest {
@@ -42,27 +45,9 @@ public class eDAOTest {
 	}
 	
 	
-	@Test
-	public void testInsertEmployees() {
-		
-		Employee e = new Employee("hi", "hello", 3);
-		
-		EmployeeDAO mockDAO = Mockito.spy(new EmployeeDAO());
-		ArrayList<Employee> mockEmployees = Mockito.mock(ArrayList.class);
-		
-		mockEmployees = mockDAO.getEmployees();
-		Mockito.verify(mockDAO).getEmployees();
-		int preInsertCount = mockEmployees.size();
-		
-		mockDAO.insertEmployee(e);
-		Mockito.verify(mockDAO).insertEmployee(e);
-		
-		mockEmployees = mockDAO.getEmployees();
-		int postInsertCount = mockEmployees.size();
-		
-		assertTrue(preInsertCount < postInsertCount);
-		
-	}
+	//import org.mockito.*;
+	
+
 	
 	
 }
