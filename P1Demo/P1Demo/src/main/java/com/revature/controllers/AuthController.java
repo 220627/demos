@@ -2,6 +2,9 @@ package com.revature.controllers;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.gson.Gson;
 import com.revature.models.LoginDTO;
 import com.revature.models.User;
@@ -11,6 +14,9 @@ import io.javalin.http.Handler;
 
 public class AuthController {
 
+	//Instantiate a Logger object so that we can achieve logging (you can either do logging OR testing for P1)
+	public static Logger log = LogManager.getLogger();
+	
 	//we need an AuthService, remember the Service layer sits between the Controllers and DAOs
 	AuthService as = new AuthService();
 	
@@ -35,6 +41,9 @@ public class AuthController {
 		
 		if(user != null) { //if login is successful...
 			
+			//log that the user logged in successfully
+			log.info("User Logged In!");
+			
 			ses = ctx.req.getSession(); //this is how we create new sessions
 			
 			String userJSON = gson.toJson(user); //turn the returned User into JSON
@@ -43,6 +52,10 @@ public class AuthController {
 			ctx.status(202); //202 stands for "accepted"
 			
 		} else {
+			
+			//log that the user failed to log in
+			log.warn("User Failed to Login!");
+			
 			ctx.status(401); //401 stands for "unauthorized"
 		} 
 		
