@@ -142,8 +142,10 @@ async function updateSalary(){
 
     //I want some control flow on the status code to change the HTML appropriately
     if(response.status === 202){ //if the update was successful...
-        
+        //tell the user the update was successful, along with the pertinent details
+        document.getElementById("updateHeader").innerText = "Salary for " + title + " updated to: " + salary
+    } else {
+        document.getElementById("updateHeader").innerText = "Update failed! Perhaps you typed the title wrong?"
     }
-
 
 }
