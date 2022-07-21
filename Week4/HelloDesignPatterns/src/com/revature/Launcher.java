@@ -56,7 +56,7 @@ public class Launcher {
 		
 		//Realistically, you'd make factories when you have a bunch of concrete classes that are similar...
 		//but with certain distinct values in their variables. 
-		//This would be more helpful if the cookie classes had a bunch of variables distinct to them
+		//This would be more helpful if the different cookie classes had a bunch of variables distinct to them
 		
 		
 		
