@@ -1,0 +1,5 @@
+2022-07-21 16:59:35 INFO  AuthController:45 - User Logged In!
+2022-07-21 16:59:48 INFO  AuthController:45 - User Logged In!
+2022-07-21 16:59:49 INFO  AuthController:45 - User Logged In!
+2022-07-21 16:59:50 INFO  AuthController:45 - User Logged In!
+2022-07-21 16:59:50 INFO  AuthController:45 - User Logged In!
