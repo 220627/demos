@@ -1,5 +1,7 @@
 package com.revature;
 
+import com.revature.factory.Cookie;
+import com.revature.factory.CookieFactory;
 import com.revature.singleton.Singleton;
 
 public class Launcher {
@@ -36,7 +38,25 @@ public class Launcher {
 		
 		System.out.println("========================================(Factory)");
 		
+		//Instantiate a CookieFactory so we can get some cookies
+		CookieFactory cf = new CookieFactory();
 		
+		//use the getCookie method to bake some cookies
+		Cookie c1 = cf.getCookie("snickerdoodle");
+		Cookie c2 = cf.getCookie("macadamia");
+		Cookie c3 = cf.getCookie("doublechocolate");
+		
+		//use the getBaked() method of each cookie
+		c1.getBaked();
+		c2.getBaked();
+		c3.getBaked();
+		
+		
+		//"This takes longer than if we just made new cookies... what's the point?
+		
+		//Realistically, you'd make factories when you have a bunch of concrete classes that are similar...
+		//but with certain distinct values in their variables. 
+		//This would be more helpful if the cookie classes had a bunch of variables distinct to them
 		
 		
 		
