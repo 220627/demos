@@ -4,6 +4,7 @@ const url = "http://localhost:3000"; //putting our base URL in a variable for cl
 //add an event listener to give our buttons some functionality (DOM Selection)
 document.getElementById("getEmployeeButton").onclick = getEmployees //this button will GET all employees
 document.getElementById("loginButton").onclick = loginFunction //this button will send a user's login credentials
+document.getElementById("updateButton").onclick = updateSalary //this button will send data that updates a role salary
 
 
 //getEmployees is an async function which uses a fetch request to get employees from our server------------------------------------------
@@ -124,5 +125,25 @@ async function loginFunction(){
 
 //This function will take in user input to update a Role's salary-------------------------------
 async function updateSalary(){
-    
+
+    //gather the user inputs for role title and role salary
+    //remember, the values in parenthesis are the IDs of the input elements in our HTML
+    let title = document.getElementById("roleTitle").value
+    let salary = document.getElementById("salary").value
+
+    //fetch request to update role salary (PUT)
+    //it will take the role title as a path param, and it will take the new salary as the body
+    let response = await fetch(url + "/roles/" + title, {
+        method:"PUT", //send a PUT request (check the endpoint handler in the launcher, it takes a PUT to /roles/:title)
+        body: salary //no need to turn this into JSON, it's just one number
+    })
+    //this fetch has two parameters: the URL, and a {configuration object} to configure our HTTP Request
+    //In this config object, we're going to manipulate attributes to make sure we send a PUT with a body
+
+    //I want some control flow on the status code to change the HTML appropriately
+    if(response.status === 202){ //if the update was successful...
+        
+    }
+
+
 }
