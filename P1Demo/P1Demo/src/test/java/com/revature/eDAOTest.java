@@ -87,9 +87,8 @@ public class eDAOTest {
 	@Test
 	public void testGetRoleGetsCalled() {
 		
-		EmployeeDAO mockEDAO = Mockito.spy(new EmployeeDAO());
+		//we need a RoleDAO object to call its method
 		RoleDAO mockRDAO = Mockito.spy(new RoleDAO());
-		
 		
 		//.when() listens for a certain method to get called.
 		//.thenReturn() lets us give a specific value for the method's return.
@@ -105,8 +104,5 @@ public class eDAOTest {
 		assertNotNull(r);
 		
 	}
-	
 
-	
-	
 }
