@@ -1,0 +1,8 @@
+header {
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    width: 20vw;
+    margin: auto;
+    border-radius: 20%;
+}
