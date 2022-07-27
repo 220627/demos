@@ -2,17 +2,18 @@
 
     <div class="todo-card">
 
-        <h2>Todo #1</h2>
-        <p>Task: Brush Teeth</p>
-        <p>Status: Incomplete</p>
+        <!-- String Interpolation!! Taking data from the TS, rending it on the HTML-->
+        <h2>Todo #{{todosArray[0].id}}</h2>
+        <p>Task: {{todosArray[0].task}}</p>
+        <p>Status: {{todosArray[0].status}}</p>
 
     </div>
 
     <div class="todo-card">
 
-        <h2>Todo #2</h2>
-        <p>Task: Brush Teeth</p>
-        <p>Status: Incomplete</p>
+        <h2>Todo #{{todosArray[1].id}}</h2>
+        <p>Task: {{todosArray[1].task}}</p>
+        <p>Status: {{todosArray[1].status}}</p>
 
     </div>
 
