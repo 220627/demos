@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosHomeComponent implements OnInit {
 
+  //a variable that determines whether the todo cards are hidden or not
+  hiddenToggle:boolean = true;
+
   //4 todo objects that we will render onto our webpage
   todo1 = {
     id: 1,
@@ -23,6 +26,13 @@ export class TodosHomeComponent implements OnInit {
   //An Array filled with the above todo objects
   //we're going to call from this in our HTML to render our todo list
   todosArray = [this.todo1, this.todo2]
+
+
+  //function to toggle todo list visibility
+  showTodoList(){
+    this.hiddenToggle = !this.hiddenToggle 
+    //setting the boolean to the opposite of its current value
+  }
 
 
 

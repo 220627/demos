@@ -14,3 +14,12 @@
     width: 10em;
     backdrop-filter: blur(20px);
 }
+
+.button{
+    background: rgba(255,228,196, .90);
+    border-radius: 25%;
+}
+
+input{
+    width: 65%;
+}

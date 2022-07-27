@@ -1,15 +1,20 @@
-<div class="grid-container">
+<div class="grid-container" >
 
-    <div class="todo-card">
+    <!-- Property Binding! Taking data from the TS, and changing an HTML attribute -->
+    <div class="todo-card" [hidden]="hiddenToggle">
 
         <!-- String Interpolation!! Taking data from the TS, rending it on the HTML-->
         <h2>Todo #{{todosArray[0].id}}</h2>
         <p>Task: {{todosArray[0].task}}</p>
         <p>Status: {{todosArray[0].status}}</p>
 
+        <label for="updateBox{{todosArray[0].id}}">Update Task</label>
+        <input id="updateBox{{todosArray[0].id}}" [(ngModel)]="todosArray[0].task" type="text">
+        
+        <button class="button" (click)="completeTask(todosArray[0].id)">Task Completed</button>
     </div>
 
-    <div class="todo-card">
+    <div class="todo-card" [hidden]="hiddenToggle">
 
         <h2>Todo #{{todosArray[1].id}}</h2>
         <p>Task: {{todosArray[1].task}}</p>
@@ -17,4 +22,9 @@
 
     </div>
 
+</div>
+
+<div>
+    <!-- Event Binding!! Like an event listener, it binds a user action to a TS function -->
+    <button class="button" (click)="showTodoList()">Show Tasks</button>
 </div>
