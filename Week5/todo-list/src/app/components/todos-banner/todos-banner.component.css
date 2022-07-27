@@ -2,7 +2,13 @@ header {
     display: flex;
     justify-content: center;
     background-color: bisque;
-    width: 20vw;
+    width: 30vw;
     margin: auto;
     border-radius: 20%;
+}
+
+img {
+    width: 10%;
+    height: 25%;
+    margin: auto;
 }
