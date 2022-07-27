@@ -10,7 +10,7 @@
     border-style: double;
     border-radius: 10%;
     border-width: .5em;
-    background-color: bisque;
-    opacity: 85%;
-
+    background: rgba(255,228,196, 0.5);
+    width: 10em;
+    backdrop-filter: blur(20px);
 }

@@ -1,13 +1,12 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: bisque;
     width: 30vw;
     margin: auto;
     border-radius: 20%;
     border-style: double;
     border-width: .5em;
-    opacity: 85%;
+    background: rgba(255,228,196, 0.85);
 }
 
 img {
