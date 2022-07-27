@@ -23,9 +23,21 @@ export class TodosHomeComponent implements OnInit {
     status: "Incomplete"
   }
 
+  todo3 = {
+    id: 3,
+    task: "put a little makeup",
+    status: "Incomplete"
+  }
+
+  todo4 = {
+    id: 4,
+    task: "something else?",
+    status: "Incomplete"
+  }
+
   //An Array filled with the above todo objects
   //we're going to call from this in our HTML to render our todo list
-  todosArray = [this.todo1, this.todo2]
+  todosArray = [this.todo1, this.todo2, this.todo3, this.todo4]
 
 
   //function to toggle todo list visibility
@@ -34,7 +46,11 @@ export class TodosHomeComponent implements OnInit {
     //setting the boolean to the opposite of its current value
   }
 
-
+  //function to toggle todo list status
+  completeTask(id:number){
+    this.todosArray[id - 1].status = "complete"
+    //why - 1? Arrays are zero indexed. If we didn't do this, the card after the target would update.
+  }
 
   constructor() { }
 
