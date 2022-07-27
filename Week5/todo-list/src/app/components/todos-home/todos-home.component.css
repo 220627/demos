@@ -1,0 +1,16 @@
+.grid-container{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+    margin: 5%;
+}
+
+.todo-card{
+    text-align: center;
+    border-style: double;
+    border-radius: 10%;
+    border-width: .5em;
+    background-color: bisque;
+    opacity: 85%;
+
+}

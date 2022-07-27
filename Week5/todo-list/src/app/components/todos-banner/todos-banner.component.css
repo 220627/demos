@@ -5,6 +5,9 @@ header {
     width: 30vw;
     margin: auto;
     border-radius: 20%;
+    border-style: double;
+    border-width: .5em;
+    opacity: 85%;
 }
 
 img {
