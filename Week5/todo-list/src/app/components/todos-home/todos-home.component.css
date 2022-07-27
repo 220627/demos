@@ -1,6 +1,6 @@
 .grid-container{
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    position: relative;
     gap: 10%;
     margin: 5%;
 }
