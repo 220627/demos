@@ -1,3 +1,13 @@
+<div class="nameDiv" [hidden]="nameDivToggle">
+    <label for="myName">What's your name?</label>
+    <!-- Two way binding for the user to insert and save their name -->
+    <input type="text" id="myName" [(ngModel)]="name">
+    <button class="button" (click)="submitName()">Submit Name!</button>
+</div>
+
+<!-- This is an *ngIf! A structural directive. IF the value evaluates to true, the element renders -->
+<h2 *ngIf="name">Welcome, {{name}}</h2>
+
 <div class="grid-container" >
 
     <!-- Property Binding! Taking data from the TS, and changing an HTML attribute -->

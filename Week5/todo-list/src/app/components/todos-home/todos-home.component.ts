@@ -10,6 +10,12 @@ export class TodosHomeComponent implements OnInit {
   //a variable that determines whether the todo cards are hidden or not
   hiddenToggle:boolean = true;
 
+  //a variable that determines whether the nameDiv is hidden or not
+  nameDivToggle:boolean = false;
+
+  //a variable that stores the name inserted by the user
+  name:String="";
+
   //4 todo objects that we will render onto our webpage
   todo1 = {
     id: 1,
@@ -50,6 +56,11 @@ export class TodosHomeComponent implements OnInit {
   completeTask(id:number){
     this.todosArray[id - 1].status = "complete"
     //why - 1? Arrays are zero indexed. If we didn't do this, the card after the target would update.
+  }
+
+  //function to hide to nameDiv after the user submits their name
+  submitName(){
+    this.nameDivToggle = true;
   }
 
   constructor() { }
