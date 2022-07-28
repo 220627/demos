@@ -5,7 +5,7 @@
         <h4>Search for your Pokemon:</h4>
         <!-- [(Two way binding!!)] this input field will take user input and fill a variable in our TS-->
         <input type="number" class="col-lg-3" [(ngModel)] = "input">
-        <button class="btn btn-dark col-lg-1">Catch</button>
+        <button class="btn btn-dark col-lg-1" (click)="getPoke()">Catch</button>
     </div>
 
     <!-- Table to display pokemon data -->
