@@ -19,7 +19,7 @@ export class TodosHomeComponent implements OnInit {
   //4 todo objects that we will render onto our webpage
   todo1 = {
     id: 1,
-    task: "wake up",
+    task: "wake up lkahsflkashdlkasjdklasjdklasjdlkasjdlkasdjaslkdhaslkdhaskdjhasdklhasdlkashdlkashdlkashfldskfhldskdjaslkdjaslkfhdslkfhdsklfjadslkasjdlkasjfkdshf",
     status: "Incomplete"
   }
 
