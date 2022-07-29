@@ -5,8 +5,8 @@ export class Pokemon {
     //this constructor will initialize the Pokemon's variables when we get it from the API
     constructor(
         public name: String,
-        public types: Object,
-        public sprite: Object
+        public types: any,
+        public sprites: any
     ){}
 
 }

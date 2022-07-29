@@ -17,7 +17,7 @@ export class PokemonService {
   pokemon:Pokemon = {
     name:"",
     types: "",
-    sprite: ""
+    sprites: ""
   }
 
 
