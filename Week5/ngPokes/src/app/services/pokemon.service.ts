@@ -39,5 +39,9 @@ export class PokemonService {
   //{observe: "response"} tells your function to get the entire HTTP Response, which includes the Response body and status code
   
   //hypothetical function that would let us make POST requests to the Pokeapi and return the pokemon back
+  sendPokemonToApi(pokemon:Pokemon):Observable<Pokemon>{
+    return this.http.post("THE URL WOULD GO HERE", pokemon) as Observable<Pokemon>
+  }
+
 
 }

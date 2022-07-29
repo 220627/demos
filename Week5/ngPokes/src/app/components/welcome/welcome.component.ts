@@ -10,6 +10,8 @@ export class WelcomeComponent implements OnInit {
 
   public pokeCount = this.ps.counter;
 
+  public sprite = this.ps.pokemon.sprites.front_default
+
   constructor(private ps:PokemonService) { }
 
   ngOnInit(): void {

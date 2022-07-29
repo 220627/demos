@@ -34,6 +34,10 @@ export class PokedexComponent implements OnInit {
         this.pokemon = data.body; //get the data, put it in our pokemon variable
         console.log(this.pokemon); //print out our pokemon, helpful for debugs.
         this.ps.counter++; //increment the counter
+
+        //populate the pokemon in the service
+        this.ps.pokemon = data.body;
+
       }, 
       () => { //in case of errors, this block will run
         console.log("it got away!");
