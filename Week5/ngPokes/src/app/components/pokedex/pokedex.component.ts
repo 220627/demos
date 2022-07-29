@@ -33,11 +33,16 @@ export class PokedexComponent implements OnInit {
       (data:any) => {
         this.pokemon = data.body; //get the data, put it in our pokemon variable
         console.log(this.pokemon); //print out our pokemon, helpful for debugs.
+        this.ps.counter++; //increment the counter
+      }, 
+      () => { //in case of errors, this block will run
+        console.log("it got away!");
       }
 
     )
 
   }
+
 
   ngOnInit(): void {
   }

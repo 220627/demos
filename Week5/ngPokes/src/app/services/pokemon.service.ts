@@ -12,6 +12,9 @@ import { Pokemon } from '../models/pokemon';
 
 export class PokemonService {
 
+  //counter variable that we will display on the welcome page
+  counter:number = 0;
+
   //pokemon object to get displayed on our components
   //its default values will get filled when we get a new Pokemon
   pokemon:Pokemon = {

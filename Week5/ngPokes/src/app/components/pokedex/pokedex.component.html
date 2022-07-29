@@ -11,16 +11,16 @@
     <!-- Table to display pokemon data -->
     <table class="table table-striped table-hover">
         <thead>
-            <th class="col-sm-1">Name</th>
-            <th class="col-sm-1">Type</th>
+            <th class="col-sm-2">Name</th>
+            <th class="col-sm-2">Type</th>
             <th>Sprite</th>
         </thead>
 
         <tbody>
-            <td>{{pokemon.name}}</td>
-            <td>{{pokemon.types[0].type.name}}
+            <td>{{pokemon.name | titlecase}}</td>
+            <td>{{pokemon.types[0].type.name | titlecase}}
                 <span *ngIf="pokemon.types[1]">
-                    {{pokemon.types[1].type.name}}
+                &  {{pokemon.types[1].type.name | titlecase}}
                 </span>
             </td>
             <td><img src="{{pokemon.sprites.front_default}}" alt="pokemon picture"></td>
