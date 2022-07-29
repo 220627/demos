@@ -18,7 +18,11 @@
 
         <tbody>
             <td>{{pokemon.name}}</td>
-            <td>{{pokemon.types[0].type.name}}</td>
+            <td>{{pokemon.types[0].type.name}}
+                <span *ngIf="pokemon.types[1]">
+                    {{pokemon.types[1].type.name}}
+                </span>
+            </td>
             <td><img src="{{pokemon.sprites.front_default}}" alt="pokemon picture"></td>
         </tbody>
 
