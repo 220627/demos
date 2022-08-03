@@ -1,7 +1,10 @@
 package com.revature.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,6 +54,16 @@ public class PokemonController {
 		
 	}
 	
-	
+	//get all pokemon - every GET request to /pokemon will go here
+	@GetMapping
+	public ResponseEntity<List<Pokemon>> getAllPokemon(){
+		
+		//no user inputs so this method will either work or it won't...
+		//if it works, return a 200 (OK) status code, which lets us return a response body within it
+		return ResponseEntity.ok(pDAO.findAll());
+		
+		//note the shorthand I'm using, I could have also done .ok().body(pDAO.findAll()) but why would I do that?
+		
+	}
 	
 }
