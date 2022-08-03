@@ -103,7 +103,7 @@ public class PokemonController {
 		
 		Optional<List<Pokemon>> pokeList = pDAO.findByName(name);
 		
-		if(pokeList.isPresent()) {
+		if(!pokeList.get().isEmpty()) {
 			
 			List<Pokemon> p = pokeList.get();
 			

@@ -34,8 +34,18 @@ public interface PokemonDAO extends JpaRepository<Pokemon, Integer>{
 	
 	//there are a lot of options for custom methods, feel free to look into them
 	
-	//hypothetical login DAO method------------
+	//hypothetical login DAO method------------------------------------------------------
 	
-	//LATER> Remind Ben if he doesn't do this
+	//This would probably have to be in a UserDAO, or AuthDAO, anything related to Users... JpaRepository<User, Integer>
+	//remember the generic in JpaRepository needs to reference a specific object
+	
+	/*
+	public Optional<User> findByUsernameAndPassword(String username, String password);
+	
+	//since it's an optional, it'll either give you a User, or null
+	//which of course, you can do some control flow on.
+	//This particular method would only work if the variables were called username and password
+	
+	*/
 	
 }
