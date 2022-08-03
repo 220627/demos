@@ -1,5 +1,8 @@
 package com.revature.daos;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +18,24 @@ import com.revature.models.Pokemon;
 @Repository //We want this Interface to be a Spring Bean
 public interface PokemonDAO extends JpaRepository<Pokemon, Integer>{
 
+	//we had define this method signature, because JpaRepository doesn't have any method to find a pokemon by its name
+		//Spring Data is smart, but it can't predict what our Classes or their variables will be
+	//BUT Spring Data is smart enough to create this method body for us when given an abstract method
+	public Optional<List<Pokemon>> findByName(String name);
 	
+	//HOW DOES THIS WORK???
+	//By having a method name starting in "findBy" and ending in the variable you want to find!
+	//and of course, we need a parameter to search for
+	
+	//NOTES: 
+	//Spring needs your method name to be in camelCase, or it will throw vague errors
+	//your variable names should not have underscores (or maybe google a way to have underscores)
+	//make sure to call it findBy___ or it won't be recognized
+	
+	//there are a lot of options for custom methods, feel free to look into them
+	
+	//hypothetical login DAO method------------
+	
+	//LATER> Remind Ben if he doesn't do this
 	
 }

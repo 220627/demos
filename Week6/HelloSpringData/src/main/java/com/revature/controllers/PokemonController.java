@@ -95,4 +95,24 @@ public class PokemonController {
 		
 	}
 	
+	//Find by name - Any HTTP Request to pokemon/byName/{some String} will go here
+	@GetMapping(value="/byName/{name}")
+	public ResponseEntity<List<Pokemon>> findByName(@PathVariable String name){
+		
+		//not commenting this too heavily - it's very similar to the method above
+		
+		Optional<List<Pokemon>> pokeList = pDAO.findByName(name);
+		
+		if(pokeList.isPresent()) {
+			
+			List<Pokemon> p = pokeList.get();
+			
+			return ResponseEntity.ok(p);
+		}
+		
+		return ResponseEntity.noContent().build();
+		
+	}
+	
+	
 }
