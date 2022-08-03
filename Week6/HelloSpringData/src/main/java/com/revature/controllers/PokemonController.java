@@ -1,10 +1,12 @@
 package com.revature.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,6 +65,33 @@ public class PokemonController {
 		return ResponseEntity.ok(pDAO.findAll());
 		
 		//note the shorthand I'm using, I could have also done .ok().body(pDAO.findAll()) but why would I do that?
+		
+	}
+	
+	//get pokemon by id - every GET request to pokemon/byId/{some nunmber} will go here
+	//the number given as the URL endpoint (which is the path variable) will be the ID we search by.
+	@GetMapping(value="/byId/{id}")
+	public ResponseEntity<Pokemon> findById(@PathVariable int id){
+		
+		//findById from JpaRepository returns an Optional...
+		//Optionals lend to code flexibility because it may or may not have the object requested. It may be null.
+		//this helps us avoid NullPointerExceptions
+		
+		//this is an Optional which potentially holds a Pokemon object
+		Optional<Pokemon> pokeOptional = pDAO.findById(id);
+		
+		//we can check if the optional has data with .isPresent(), or not with .isEmpty()
+		if(pokeOptional.isPresent()) {
+			//we can get an Optional's data with .get()
+			Pokemon p = pokeOptional.get();
+			
+			//return the Pokemon with a 200 status code and the pokemon data in the response body
+			return ResponseEntity.ok(p);
+			
+		}
+		
+		//if the Optional is null (in other words if Optional.isPresent() == false)
+		return ResponseEntity.noContent().build(); //return a no content status code, with empty response body
 		
 	}
 	
