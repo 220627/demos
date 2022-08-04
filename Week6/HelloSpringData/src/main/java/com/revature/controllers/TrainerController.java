@@ -29,7 +29,7 @@ public class TrainerController {
 	
 	//one method to take in Trainer login credentials
 	//USUALLY we would make a LoginDTO out of the RequestBody, but for the sake of time we're just using a Trainer object
-	@PostMapping
+	@PostMapping(value = "/login") //any HTTP Request to pokemon/login goes here
 	public ResponseEntity<Trainer> login(@RequestBody Trainer t){
 		
 		//call the findByUsernameAndPassword method, using the values that the Trainer now has
