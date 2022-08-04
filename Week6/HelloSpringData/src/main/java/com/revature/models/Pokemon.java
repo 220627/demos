@@ -1,10 +1,14 @@
 package com.revature.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -31,6 +35,25 @@ public class Pokemon {
 	@Column
 	private int level;
 
+	//@ManyToOne relationship with the Trainer Class - one Trainer can have many Pokemon
+	//We need to make this Trainer field a FK to the Trainer Table
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "trainerId") //THIS is how you specify the PK that this FK is referring to
+	//the name attribute MUST be equal to the name of the id in the Trainer class (trainerId)
+	//IMPORTANT NOTE: we can't use @Column here, because @JoinColumn already makes it a column
+	private Trainer trainer;
+	
+	//what are fetch and cascade??? See the notes, small rundown here:
+	
+	/*
+	  
+	  fetch - sets whether we want the Trainer to be eagerly or lazily loaded.
+	  			(we want eager loading so that the object is ready before we even need it)
+	  			
+	  cascade - sets how changes cascade. 
+	  			with CascadeType.ALL, if a trainer is updated/deleted that update/delete will cascade automatically.
+	 
+	 */
 	
 	//boilerplate code--------------------------------------------------
 	
@@ -43,22 +66,11 @@ public class Pokemon {
 
 	//all args
 
-	public Pokemon(int poke_id, String name, String type, int level) {
-		super();
-		this.poke_id = poke_id;
-		this.name = name;
-		this.type = type;
-		this.level = level;
-	}
+
 
 	//all args minus id, we do this so that we can insert a new DB record 
 	
-	public Pokemon(String name, String type, int level) {
-		super();
-		this.name = name;
-		this.type = type;
-		this.level = level;
-	}
+
 
 	public int getPoke_id() {
 		return poke_id;
@@ -92,9 +104,5 @@ public class Pokemon {
 		this.level = level;
 	}
 
-	@Override
-	public String toString() {
-		return "Pokemon [poke_id=" + poke_id + ", name=" + name + ", type=" + type + ", level=" + level + "]";
-	}
 	
 }

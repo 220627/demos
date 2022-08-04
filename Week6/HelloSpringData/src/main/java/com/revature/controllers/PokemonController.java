@@ -103,6 +103,9 @@ public class PokemonController {
 		
 		Optional<List<Pokemon>> pokeList = pDAO.findByName(name);
 		
+		
+		//we had to do this, because even if the name doesn't exist, we'd get a empty List (which isn't null technically)
+		//so we're checking here is the List itself is empty
 		if(!pokeList.get().isEmpty()) {
 			
 			List<Pokemon> p = pokeList.get();
