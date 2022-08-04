@@ -65,15 +65,42 @@ public class Pokemon {
 	}
 
 	//all args
-
-
+	public Pokemon(int poke_id, String name, String type, int level, Trainer trainer) {
+		super();
+		this.poke_id = poke_id;
+		this.name = name;
+		this.type = type;
+		this.level = level;
+		this.trainer = trainer;
+	}
 
 	//all args minus id, we do this so that we can insert a new DB record 
-	
+	public Pokemon(String name, String type, int level, Trainer trainer) {
+		super();
+		this.name = name;
+		this.type = type;
+		this.level = level;
+		this.trainer = trainer;
+	}
 
+	
+	@Override
+	public String toString() {
+		return "Pokemon [poke_id=" + poke_id + ", name=" + name + ", type=" + type + ", level=" + level + ", trainer="
+				+ trainer + "]";
+	}
 
 	public int getPoke_id() {
 		return poke_id;
+	}
+
+
+	public Trainer getTrainer() {
+		return trainer;
+	}
+
+	public void setTrainer(Trainer trainer) {
+		this.trainer = trainer;
 	}
 
 	public void setPoke_id(int poke_id) {
