@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.revature.daos.PokemonDAO;
 import com.revature.models.Pokemon;
@@ -117,5 +118,20 @@ public class PokemonController {
 		
 	}
 	
+	//a method that lets us get pokemon from the pokeAPI----------------
+	
+	//use RestTemplate to get a pokemon given their name
+	public RestTemplate rt = new RestTemplate(); //with with, we can send HTTP Requests FROM OUR JAVA SERVER
+	
+	@GetMapping(value="api/{name}")
+	public ResponseEntity<Pokemon> getPokemonFromApi(@PathVariable String name) {
+		
+		//.getForObject will send a GET request to the specified URL
+		Pokemon externalPoke = rt.getForObject("https://pokeapi.co/api/v2/pokemon/" + name, Pokemon.class);
+		
+		//didn't do null checks here... hehe
+		return ResponseEntity.ok(externalPoke);
+		
+	}
 	
 }
