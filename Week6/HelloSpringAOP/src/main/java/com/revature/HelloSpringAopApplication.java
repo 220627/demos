@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.revature.daos.AvengerDAO;
 import com.revature.models.Avenger;
 
 @SpringBootApplication
@@ -28,6 +29,15 @@ public class HelloSpringAopApplication {
 		a.setAveName("Frozone");
 		a.setFirstName("Lucious");
 		a.setPower("Honey where is my supersuit????");
+		
+		//so we can see that BEFORE any method in the models package runs, we get a log in the console
+		//this is thanks to our @Before advice in our LoggingAspect
+		
+		
+		//making Frozone fight to show our @AfterReturning advice working
+		AvengerDAO aDAO = ac.getBean(AvengerDAO.class);
+		
+		System.out.println(aDAO.fight(a, "Freezes you >:D", 15));
 		
 	}
 

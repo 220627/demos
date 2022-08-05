@@ -3,6 +3,7 @@ package com.revature.aspects;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -27,9 +28,37 @@ public class LoggingAspect {
 		//getSignature() returns the method signature getting called.
 		log.info(jp.getTarget() + " invoked " + jp.getSignature());
 		
+		//WHERE IS THE POINTCUT HERE?
+		//Line 23. Remember, the pointcut is WHERE the advice WILL get injected
 		
 	}
 	
 	
+	
+	//This advice will run AFTER the fight method RETURNS successfully. 
+	//Rememeber, a pointcut is where advice WILL be injected, in this case it's the fight() method
+	//fight returns a String, so we need to specify that
+	//(..) means it can take any parameters (useful if you have overloaded methods)
+	@AfterReturning(pointcut="execution(String fight(..))", returning="returnedObject")
+	public void logSuccessfulFight(JoinPoint jp, Object returnedObject) {
+		
+		log.info(jp.getTarget() + " invoked " + jp.getSignature() + " and returned " + returnedObject);
+		
+		//we know getTarget gives us the object in question
+		//and getSignature gives us the method signature
+		//and we set the variable "returnedObject" to hold the String that gets returned from the fight() method.
+		
+	}
+	
+	
+	//NOT SEEN:
+	
+	/*
+	  
+	  @AfterThrowing - this advice would execute after an exception is throw
+	  
+	  @Around - a powerful but tricky advice that lets you execute advice before, during, or after a PointCut.
+	 
+	 */
 	
 }
