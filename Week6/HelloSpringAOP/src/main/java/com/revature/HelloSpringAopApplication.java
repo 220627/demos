@@ -9,6 +9,7 @@ import com.revature.daos.AvengerDAO;
 import com.revature.models.Avenger;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.revature")
 public class HelloSpringAopApplication {
 
 	//We need to make a ApplicationContext to get beans for AOP to work
